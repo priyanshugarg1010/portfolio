@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+   --primary: "#EB5939";
+   --creamText: "#B7AB98";
+   --primaryBG: "#0D0D0D";
+   --secondaryBG: "#111111";
+}
