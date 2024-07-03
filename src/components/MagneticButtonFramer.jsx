@@ -10,7 +10,7 @@ export default function MagneticButtonFramer({ children }) {
     const { height, width, left, top } = ref.current.getBoundingClientRect();
     const middleX = clientX - (left + width / 2);
     const middleY = clientY - (top + height / 2);
-    setPosition({ x: middleX, y: middleY });
+    setPosition({ x: middleX * 0.1, y: middleY * 0.1 });
   };
 
   const reset = () => {
@@ -27,7 +27,8 @@ export default function MagneticButtonFramer({ children }) {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       className="relative"
-      transition={{ type: "spring", stiffness: 100, damping: 5, mass: 1 }}
+      // transition={{ type: "spring", stiffness: 100, damping: 5, mass: 1 }}
+      transition={{ type: "spring", stiffness: 350, damping: 5, mass: 0.5 }}
     >
       {children}
     </motion.div>
