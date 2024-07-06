@@ -8,6 +8,7 @@ export default {
         creamText: "#B7AB98",
         primaryBG: "#0D0D0D",
         secondaryBG: "#111111",
+        lightGreen: "#c9fd74",
       },
     },
   },

@@ -10,7 +10,7 @@ import {
 export default function StickyCursor({ stickyElement, hoverSize }) {
   const [isHovered, setIsHovered] = useState(false);
   const cursor = useRef(null);
-  const cursorSize = isHovered ? hoverSize : 15;
+  const cursorSize = isHovered ? (hoverSize ? hoverSize : 0) : 15;
 
   const mouse = {
     x: useMotionValue(0),
@@ -108,7 +108,7 @@ export default function StickyCursor({ stickyElement, hoverSize }) {
         width: cursorSize,
         height: cursorSize,
       }}
-      className="fixed size-8 bg-primary rounded-full cursor-pointer pointer-events-none"
+      className={`fixed size-8 rounded-full cursor-pointer pointer-events-none bg-primary`}
       ref={cursor}
     ></motion.div>
   );

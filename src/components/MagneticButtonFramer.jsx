@@ -27,7 +27,6 @@ export default function MagneticButtonFramer({ children }) {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       className="relative"
-      // transition={{ type: "spring", stiffness: 100, damping: 5, mass: 1 }}
       transition={{ type: "spring", stiffness: 350, damping: 5, mass: 0.5 }}
     >
       {children}
